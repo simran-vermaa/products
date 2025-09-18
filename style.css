@@ -28,7 +28,7 @@
 
 .product {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
     padding: 5px;
     margin: 10px 0;
@@ -106,15 +106,20 @@
     color: #F4F3EE;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+    .product {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
     .product {
         width: calc(50% - 40px);
     }
 }
 
-
-@media (min-width: 1024px) {
+@media (min-width: 1026px) {
     .product {
-        width: calc(33.333% - 40px);
+        width: calc(25% - 40px);
     }
 }
