@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: #463F3A;
+    box-sizing: border-box; 
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+}
+
+.welcome-section{
+    min-height: 100vh;
+}
+
+.welcome-container {
+    background-color: #BA958A;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.welcome-image {
+    border-top-left-radius: 85%;
+    border-top-right-radius: 85%;
+    background-color: #BA958A;
+    width: 40vw;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-size: cover;
+    animation-delay: 3s;
+}
+
+@keyframes fadeCycle {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  50%  { opacity: 0; }
+  90%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.welcome-img {
+    animation: fadeCycle 5s ease-in-out infinite;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 85%;
+    border-top-right-radius: 85%;   
+}
+
+
+.welcome-note {
+    background-color: #BA958A;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    
+}
+
+.welcome-note img {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 8vw;
+    align-items: center;
+}
+
+
+.welcome-note p {
+    width: 40vw;
+    height: fit-content;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #BA958A;
+    
+}
+
+
+
+.welcome-note button{
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px;
+    width: 10vw;
+    color: #BA958A;
+    background-color: #F4F3EE;
+    font-size: large;
+    border: none;
+}
+
+
+@media (max-width: 1025px) {
+    .welcome-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .welcome-image {
+        width: 80vw;
+        height: 60vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .welcome-note {
+        margin-top: 5vh; 
+        margin-bottom: 5vh; 
+    }
+
+    .welcome-note p {
+        width: 80vw; 
+        font-size: 20px; 
+    }
+
+    .welcome-note button {
+        width: 30vw; 
+        padding: 15px; 
+        font-size: medium; 
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-image {
+        width: 90vw; 
+        height: 50vh;
+    }
+
+    .welcome-note img {
+        height: 15vw; 
+    }
+
+    .welcome-note p {
+        width: 90vw;
+        font-size: 16px; 
+        padding: 0 10px; 
+    }
+
+    .welcome-note button {
+        width: 30vw; 
+        padding: 10px; 
+        font-size: small; 
+        margin-top: 15px; 
+    }
+}
+
