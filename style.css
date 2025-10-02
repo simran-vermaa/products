@@ -2,23 +2,28 @@
     margin: 0;
     padding: 0;
     background-color: #F4F3EE;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-family: "Poiret One", sans-serif;
     color: #463F3A;
     box-sizing: border-box; 
+    font-weight: bold;
+}
+
+.product-section{
+    min-height: 100vh;
 }
 
 .heading {
     height: auto;
     text-align: center;
-    padding: 50px 10px 20px 10px;
-    font-size: 40px;
-    margin: 20px;
+    padding: 5vh 1vw 2vh 1vw;   
+    font-size: 4vh;
+    margin: 1vh;
 }
 
 
 
 .products-container {
-    margin: 20px;
+    margin: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -86,29 +91,36 @@
     letter-spacing: 1px;
 }
 
-.butt {
+.product-button button{
     margin: 10px 0;
-    background-color: #E0AFA0;
+    background-color: #BA958A;
     border: none;
-    width: 150px;
-    height: 60px;
+    width: 300px;
+    height: 50px;
     opacity: 100%;
     transition: opacity 0.3s ease, border-radius 0.3s ease;
+    font-size: 20px;
+    color: #F4F3EE;
+    padding: 30px 45px;
+    width: auto;
+    height: auto;
 }
 
-.butt:hover {
+.product-button:hover {
     opacity: 80%;
     border-radius: 10%;
 }
 
-.butt:active {
-    background-color: #8A817C;
-    color: #F4F3EE;
-}
 
 @media (max-width: 767px) {
     .product {
         width: 100%;
+    }
+    .product-button button {
+        padding: 20px 35px; 
+        font-size: 14px;    
+        width: 100%; 
+        max-width: 250px;
     }
 }
 
@@ -116,10 +128,20 @@
     .product {
         width: calc(50% - 40px);
     }
+   .product-button button {
+        padding: 30px 45px;
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1026px) {
     .product {
         width: calc(25% - 40px);
     }
+    .product-button button {
+       
+       
+        font-size: 20px;
+    }
+    
 }
