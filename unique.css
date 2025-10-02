@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+}
+
+.unique-section {
+    min-height: 100vh;
+}
+
+.main-unique {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(24, 1fr);
+}
+
+.main-unique button {
+    grid-row: 15 / 17;
+    grid-column: 11/15;
+    border: none;
+    background-color: #9d968f;
+    color: #F4F3EE;
+    font-size: 1.5rem;
+    padding: 15px; 
+}
+
+.middle-unique {
+    grid-row: 6 / 14;
+    margin: 40px;
+    grid-column: 10 / 16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px; 
+    background-color: #9d968f;
+    border-radius: 10px;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle-unique img{
+    max-width: 80%;
+    max-height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes appear {
+    from {
+        opacity: 1;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.middle-unique div {
+    background-color: #9d968f;
+    color: #F4F3EE;
+    text-align: center;
+}
+
+
+.unique-description {
+    border-radius: 5%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+    background-color: #F4F3EE;
+    font-size: 1.3rem; 
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    padding: 50px 30px; 
+    margin: 0 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-left-unique { grid-row: 2 / 9; grid-column: 2 / 10; }
+.top-right-unique { grid-row: 2 / 9; grid-column: 16 / 24; }
+.bottom-left-unique { grid-row: 11 / 18; grid-column: 2 / 10; }
+.bottom-right-unique { grid-row: 11 / 18; grid-column: 16 / 24; }
+
+.unique-txt {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #F4F3EE;
+    font-size: 1.2rem; 
+}
+
+.unique-img {
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.unique-img img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 1024px) {
+    .main-unique {
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .top-left-unique { grid-row: 1; grid-column: 1; }
+    .top-right-unique { grid-row: 1; grid-column: 2; }
+    .middle-unique {
+        grid-row: 2;
+        grid-column: 1 / 3;
+        font-size: 40px; 
+        margin: 20px 0; 
+    }
+    .bottom-left-unique { grid-row: 3; grid-column: 1; }
+    .bottom-right-unique { grid-row: 3; grid-column: 2; }
+
+    .main-unique button {
+        grid-row: 4;
+        grid-column: 1 / 3;
+        margin-top: 30px; 
+        font-size: 1.1rem; 
+        padding: 12px;
+    }
+
+    .unique-img {
+        height: 25vh; 
+    }
+    
+    .unique-txt {
+        font-size: 1rem;
+    }
+
+    .unique-description {
+        font-size: 1.1rem; 
+        padding: 25px 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .main-unique {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .top-left-unique { grid-row: 1; grid-column: 1; }
+    .top-right-unique { grid-row: 2; grid-column: 1; }
+    .middle-unique {
+        grid-row: 3;
+        grid-column: 1;
+        font-size: 24px; 
+        padding: 10px;
+        width: 100%;
+        margin: 0; 
+        min-height: 150px;
+    }
+    .bottom-left-unique { grid-row: 4; grid-column: 1; }
+    .bottom-right-unique { grid-row: 5; grid-column: 1; }
+    .main-unique button {
+        grid-row: 6;
+        grid-column: 1;
+        font-size: 0.9rem;
+        padding: 8px;
+        margin: 10px 0 20px 0; 
+    }
+    
+    .unique-img {
+        height: 20vh;
+    }
+
+    .unique-txt {
+        font-size: 1rem;
+    }
+
+    .unique-description {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 0; 
+    }
+}
